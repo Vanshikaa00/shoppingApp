@@ -1,1 +1,41 @@
-<p>login works!</p>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<div class="container-fluid" id="gradbg">
+  <div class="card-deck px-5 py-5" >
+    <div class="card bg-light padded" style="border-radius: 12px;">
+      <div class="card-body text-center">
+
+          <div class="card-text container-fluid">
+            <div class="row">
+              <div class="col-sm-6 py-5">
+                <img src="assets/loginimg.png" alt="loginimg.png">
+              </div>
+
+              <div class="col-sm-6 bg-muted">
+<!--form starts-->
+<form>
+  <div class="paddedone display-4">Member Login</div>
+  <div>
+      <div class="rounded my-2"><input class="md-form  p-2 form-control" type="text" placeholder="Email"></div>
+    <div class="rounded my-2"><input class="md-form p-2 form-control" type="password" placeholder="Password"></div>
+    <div><a routerLink="/signup">Don't have an account? Click here</a></div>
+    <div><button class="btn-success btn my-3" routerLink="/home">LOGIN</button></div>
+  </div>
+</form>
+<!--form ends-->
+              </div>
+            </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+</div>
