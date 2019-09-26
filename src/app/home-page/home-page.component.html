@@ -37,28 +37,7 @@
 
 <!--col 2 starts-->
     <div class="col-sm-9 p-4 colorgray ">
-
-      <div class="m-2 d-flex flex-wrap">
-        <div *ngFor="let product of products" class="m-4">
-          <div class="card elementsAlignedInThree" >
-            <div class="mt-5 mx-auto">
-
-
-              <div class="card-body ">
-                <img class="card-img-top mx-4 image pb-3" src={{product.src}}>
-                <div class="prodName">{{product.Name}}</div><br>
-                <div class="prodPrice">{{product.Price}}</div><br>
-                <div class="prodPrice"><a routerLink="/product-list">View Details</a></div><br>
-
-                <button type="button" routerLink="/cart" class="btnclass btn-small btn btn-primary">Add to Cart</button>
-
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
+   <app-product-list></app-product-list>
     </div>
 <!--col 2 ends-->
   </div>

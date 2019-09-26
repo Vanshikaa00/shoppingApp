@@ -1,5 +1,5 @@
 <app-nav-bar></app-nav-bar>
-<div class="container c1 ">
+<div class=" container c1 ">
   <table class="  table table-bordered">
     <thead>
     <tr>
@@ -13,16 +13,18 @@
     </thead>
     <tbody>
     <tr>
-      <td class="c4"> <a>X</a></td>
+      <td class="c4"> <a href="#" class="text-dark">X</a></td>
       <td class="c3"><img src="assets/scenery.jpg" style="width: 70px;height: 70px;"></td>
       <td class="c3 ">Belt</td>
-      <td class="c3"> Rs 650.00</td>
+      <td class="c3 " > Rs 650.00</td>
       <td class="c3">
-        <div class="container ">
-          <div class="row d-flex mx-5" >
-            <button class="mx-1 btn text-light bg-primary col-sm-1">-</button>
-            <button class="mx-1  btn text-light  bg-primary col-sm-1">1</button>
-            <button class="mx-1 btn text-light bg-primary col-sm-1">+</button>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <button type="button" class=" btn btn-outline-secondary">-</button>
+              <button type="button" class="mx-1 btn btn-outline-secondary">1</button>
+              <button type="button" class="btn btn-outline-secondary">+</button>
+            </div>
           </div>
         </div>
       </td>
@@ -35,6 +37,22 @@
   </table>
 </div>
 
+<div class=" flex-wrap container c5">
+  <div  style="margin-left:57%;">Cart Totals</div>
+  <br/>
+  <table style="margin-left:57%;" class="  table table-bordered">
+    <tr>
+      <th>Subtotal</th>
+      <td style="font-weight: lighter;">Rs 650.00</td>
+    </tr>
+    <tr>
+      <th>Total</th>
+      <td style="font-weight: lighter;">Rs 650.00</td>
+    </tr>
+  </table>
+  </div>
 
 
-
+<div class="container">
+  <button class="mx-3 btn btn-primary" style="float: right;">Proceed to checkout</button>
+</div>
