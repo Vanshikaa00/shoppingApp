@@ -7,43 +7,32 @@
         rel="stylesheet">
 </head>
 
-
 <!--navbar starts-->
-<nav class="navbar navbar-expand-md navbar-light navbarbgcolor text-dark">
+<nav class="navbar navbar-expand-md navbar-light fixingnavbar text-dark">
 
-  <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+  <div class="navbar-collapse collapse w-100 " >
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" id="headingsize" href="#">Welcome to ShoppingBee</a>
+      <li class="nav-item ">
+      <img src="assets/logo.png" style="height: 118px;width: 118px; margin-left: 130px;">
       </li>
     </ul>
   </div>
 
 
-  <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-    <ul class="navbar-nav ml-auto ">
-      <li class="nav-item pr-1">
-        <button type="button" class="btn btn-secondary">Add new product</button>
+  <div class="navbar-collapse collapse w-100 ">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item pr-4">
+        <a href="#" class="itemstyling">Add new product</a>
       </li>
-      <li class="nav-item pr-1">
-        <button type="button" class="btn btn-secondary">My Profile</button>
+      <li class="nav-item pr-4">
+        <a routerLink="/my-account" class="itemstyling">My Account</a>
       </li>
-      <li class="nav-item pr-1">
-      <button routerLink="/cart" type="button" class="btn btn-secondary">My Cart</button>
-    </li>
-      <li class="nav-item pr-1">
-      <button type="button" routerLink="/login" class="btn btn-secondary">Log Out</button>
-    </li>
+      <li class="nav-item pr-4">
+        <a routerLink="/cart"  class="itemstyling">My Cart</a>
+      </li>
+      <li class="nav-item pr-4">
+        <a routerLink="/login" class="itemstyling">Log Out</a>
+      </li>
     </ul>
   </div>
 </nav>
-<!--search bar-->
-
-  <div class="input-group navbarbgcolor text-dark" id="searchbar">
-    <input type="text" class="form-control" placeholder="Search" >
-    <div class="input-group-append">
-      <span class="input-group-text bg-secondary" id="basic-addon2">
-        <i class="material-icons md-light">search</i></span>
-    </div>
-  </div>
-

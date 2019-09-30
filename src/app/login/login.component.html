@@ -6,36 +6,40 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
 </head>
 
-<div class="container-fluid" id="gradbg">
-  <div class="card-deck px-5 py-5" >
-    <div class="card bg-light padded" style="border-radius: 12px;">
-      <div class="card-body text-center">
 
-          <div class="card-text container-fluid">
-            <div class="row">
-              <div class="col-sm-6 py-5">
-                <img src="assets/loginimg.png" alt="loginimg.png">
-              </div>
+  <div class=" p-3">
+    <img class="c1" src="assets/logo.png">
+    <div class="c3">ALOMOS</div>
+  </div>
 
-              <div class="col-sm-6 bg-muted">
-<!--form starts-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin my-5" >
+        <div class="card-body">
+          <h5 class="card-title text-center">Log In</h5>
+          <div style="text-align: center;padding-bottom: 15px;"><a routerLink="/signup" >or click here to Create Account</a></div>
+
+         <!-- form starts-->
+<div class="container">
 <form>
-  <div class="paddedone display-4">Member Login</div>
   <div>
-      <div class="rounded my-2"><input class="md-form  p-2 form-control" type="text" placeholder="Email"></div>
+      <div class="rounded my-2 c2"><input  class="md-form  p-2 form-control" type="text" placeholder="Email"></div>
     <div class="rounded my-2"><input class="md-form p-2 form-control" type="password" placeholder="Password"></div>
-    <div><a routerLink="/signup">Don't have an account? Click here</a></div>
-    <div><button class="btn-success btn my-3" routerLink="/home">LOGIN</button></div>
+    <div><button class="btn btn-primary  mx-auto d-block btn mt-3" routerLink="/home">Login</button></div>
   </div>
 </form>
+</div>
 <!--form ends-->
-              </div>
-            </div>
-      </div>
+
+        </div>
       </div>
     </div>
   </div>
-
 </div>
+

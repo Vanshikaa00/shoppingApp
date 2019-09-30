@@ -1,15 +1,40 @@
-#gradbg{
-  height:721px;
+.c1{
+  height: 110px;
+  width: 118px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
 
-  background-image: linear-gradient(to right,#4158d0,#9053c7, #c850c0);
+.card-signin {
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
 }
-.curved{
-  border-radius:20px;
-  padding: 6px;
+
+.card-signin .card-title {
+  margin-bottom: 2rem;
+  font-weight: 300;
+  font-size: 1.5rem;
 }
-.padded{
-  padding: 77px;
+
+.card-signin .card-body {
+  padding: 2rem;
 }
-.paddedone{
-  padding: 30px 0 30px 0;
+.c2{
+  padding-top: 11px;
+  box-sizing: border-box;
+  position: relative;
+  margin: 33px 0px 0px;
+}
+.c3{
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  font-size: large;
+  letter-spacing: 15px;
+}
+.btncolor{
+  background-color: lightgray;
+  color: white;
+
 }

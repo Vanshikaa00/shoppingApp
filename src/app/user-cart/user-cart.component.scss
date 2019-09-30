@@ -1,23 +1,35 @@
 
-
+td{
+  text-align: center;
+}
+th{
+  text-align: center;
+}
 .c1{
   padding:25px;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 .c2{
-margin:15px 0 15px 900px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/canyon3.jpg');
+  height:110px;
+  width:1536px;
 }
-.c3{
-  text-align:center;
-  font-weight: lighter;
-
-}
-.c4{
-  font-weight: bolder;
- padding-top: 35px;
-  text-align:center;
+.itemstyling {
+  color: white;
 }
 .c5{
-  width: 35%;
+  margin-left:90px;
+}
+.c6{
+  font-size: 30px;
+  font-weight: lighter;
+padding-left: 881px;
 
+}
+.c3{
+  margin-top:60px;
+  margin-bottom: 70px;
+}
+.boldtext{
+  font-weight: bold;
 }

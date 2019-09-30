@@ -1,58 +1,107 @@
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+</head>
+
 <app-nav-bar></app-nav-bar>
-<div class=" container c1 ">
-  <table class="  table table-bordered">
-    <thead>
+<!--banner starts-->
+<div >
+  <div class="c2"><!--this c2 is for antelope cave background image-->
+    <!--navbar starts-->
+    <nav class="navbar navbar-expand-md navbar-light fixingnavbar text-dark">
+
+      <div class="navbar-collapse collapse w-100 " >
+        <ul class="navbar-nav mr-auto">
+          <li class="display-4 p-2 pl-5 nav-item text-light">
+            My Cart
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="navbar-collapse collapse w-100 pr-5">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a href="#" class="itemstyling">Alomos</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="text-light">/</a>
+          </li>
+          <li class="nav-item ">
+            <a routerLink="/home" class="itemstyling">Home</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="text-light">/</a>
+          </li>
+          <li class="nav-item ">
+            <a routerLink="/cart"  class="itemstyling">My cart</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--navbar end-->
+  </div>
+</div>
+<!--banner ends-->
+
+
+<div class="container "><!--bg danger here-->
+  <table class="table c1 table-bordered">
     <tr>
-      <th ></th>
-      <th ></th>
+      <th></th>
+      <th></th>
       <th>Product</th>
-      <th >Price</th>
-      <th >Quantity</th>
+      <th>Price</th>
+      <th>Quantity</th>
       <th>Total</th>
     </tr>
-    </thead>
-    <tbody>
     <tr>
-      <td class="c4"> <a href="#" class="text-dark">X</a></td>
-      <td class="c3"><img src="assets/scenery.jpg" style="width: 70px;height: 70px;"></td>
-      <td class="c3 ">Belt</td>
-      <td class="c3 " > Rs 650.00</td>
-      <td class="c3">
+      <td><a href="#" class="text-dark">X</a></td>
+      <td ><!--bg danger here-->
+        <img src="assets/scenery.jpg" height="70px" width="70px">
+      </td>
+      <td>Beanie</td>
+      <td>Rs 650.00</td>
+      <td>
         <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <button type="button" class=" btn btn-outline-secondary">-</button>
-              <button type="button" class="mx-1 btn btn-outline-secondary">1</button>
-              <button type="button" class="btn btn-outline-secondary">+</button>
-            </div>
-          </div>
+          <button type="button" class="btn btn-outline-secondary">-</button>
+          <button type="button" class="btn">1</button>
+          <button type="button" class="btn btn-outline-secondary">+</button>
         </div>
       </td>
-      <td class="c3">Rs 650.00</td>
+      <td>Rs 650.00</td>
     </tr>
     <tr>
-      <td colspan="6"><button class="c2 btn btn-primary">Update Cart</button></td>
+      <td colspan="6">
+        <button type="button" style="color:white;" class="btn btn-primary float-right">Update Cart</button></td>
     </tr>
-    </tbody>
   </table>
 </div>
 
-<div class=" flex-wrap container c5">
-  <div  style="margin-left:57%;">Cart Totals</div>
-  <br/>
-  <table style="margin-left:57%;" class="  table table-bordered">
-    <tr>
-      <th>Subtotal</th>
-      <td style="font-weight: lighter;">Rs 650.00</td>
-    </tr>
-    <tr>
-      <th>Total</th>
-      <td style="font-weight: lighter;">Rs 650.00</td>
-    </tr>
-  </table>
+<div class="container c3 p-5 "><!--bg danger here-->
+<div class="container mx-auto"><!--bg danger here-->
+  <span class="c6">Cart Totals</span>
+
+  <div class="row ">
+    <div class="col-sm-6 "> </div><!--bg danger here-->
+    <div class="col-sm-6 "><!--bg danger here-->
+      <table class="table mx-auto mt-3 table-bordered">
+      <tr>
+        <td class="boldtext">Subtotal</td>
+        <td>Rs 650.00</td>
+      </tr>
+        <tr>
+          <td class="boldtext">Total</td>
+          <td>Rs 650.00</td>
+        </tr>
+      </table>
+      <button type="button" style="float: right;" class="m-3 btn btn-primary">Proceed to checkout</button>
+    </div>
   </div>
 
-
-<div class="container">
-  <button class="mx-3 btn btn-primary" style="float: right;">Proceed to checkout</button>
+</div>
 </div>

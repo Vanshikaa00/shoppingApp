@@ -5,6 +5,7 @@ import {LoginComponent} from './login/login.component';
 import {SignUpComponent} from './sign-up/sign-up.component';
 import {ProductListComponent} from './product-list/product-list.component';
 import {ProductDetailsComponent} from './product-details/product-details.component';
+import {MyAccountComponent} from './my-account/my-account.component';
 
 export const MAIN_ROUTES: Routes = [
   {
@@ -35,6 +36,10 @@ export const MAIN_ROUTES: Routes = [
   {
     path: 'cart',
     component: UserCartComponent,
+  },
+  {
+    path: 'my-account',
+    component: MyAccountComponent,
   },
   {
     path: '**',
