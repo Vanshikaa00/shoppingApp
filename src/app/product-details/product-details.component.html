@@ -1,44 +1,76 @@
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+</head>
+
+
 <app-nav-bar></app-nav-bar>
+<!--navigation bar starts-->
+<div >
+  <div class="c22"><!--this c2 is for antelope cave background image-->
+    <!--navbar starts-->
+    <nav class="navbar navbar-expand-md navbar-light fixingnavbar text-dark">
+
+      <div class="navbar-collapse collapse w-100 " >
+        <ul class="navbar-nav mr-auto">
+          <li class="display-4 p-2 pl-3 nav-item text-light">
+        Product Details
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+  </div>
+</div>
+<!--navigation bar ends-->
 <div class="container">
 <div class="row m-5">
-  <div class="col-sm-7  p-5 bg-dark">
+  <div class="col-sm-7  p-5 bg-dark"><!--bg warning-->
     <img class="imagesizing" src="assets/scenery.jpg">
   </div>
-  <div class="col-sm-5 p-2 py-5">
-    <div class="container">
 
-      <div class="row">
-        <span class="c2">Product Name: </span><span class="c3">    Belt</span>
+  <div class="col-sm-5 p-2 py-5"><!--bg warning-->
+    <div class="container c5">
+<div class="row m-3">
+  <div class="col-sm-6 boldd">Product Id:</div><!--bg warning-->
+  <div class="col-sm-6 ">1</div><!--bg warning-->
+</div>
 
+      <div class="row m-3 ">
+        <div class="col-sm-6 boldd">Product Name:</div><!--bg warning-->
+        <div class="col-sm-6 ">Beanie</div><!--bg warning-->
       </div>
 
-      <div class="row">
-        <span class="c2">Availability:</span><span class="c3">   In stock</span>
-
+      <div class="row m-3">
+        <div class="col-sm-6 boldd">Product Price:</div><!--bg warning-->
+        <div class="col-sm-6">Rs 650.00</div><!--bg warning-->
       </div>
 
-      <div class="row">
-        <span class="c2">Price:</span><span class="c3"> Rs 350.00</span>
-
+      <div class="row m-3">
+        <div class="col-sm-6 boldd">Product Category:</div><!--bg warning-->
+        <div class="col-sm-6">Clothing</div><!--bg warning-->
       </div>
 
-      <div class="row">
-        <span class="c2">Qty: </span><span class="c3">1</span>
-        <div class="container c4">
-          <div class="row">
-            <div class="col-sm-12">
-              <button type="button" class=" btn btn-outline-secondary">-</button>
-              <button type="button" class="mx-1 btn btn-outline-secondary">1</button>
-              <button type="button" class="btn btn-outline-secondary">+</button>
-            </div>
-          </div>
-        </div>
-        <hr/>
+      <div class="row m-3">
+        <div class="col-sm-6 boldd">Product Material:</div><!--bg warning-->
+        <div class="col-sm-6 ">Wool</div><!--bg warning-->
       </div>
 
-      <div class="row ">
-        <button type="button" routerLink="/cart" class="mx-auto my-2 btnclass btn-small btn btn-primary">Add to Cart</button>
+      <div class="row m-3">
+        <div class="col-sm-6 boldd ">Product Description:</div><!--bg warning-->
+        <div class="col-sm-6 ">Elegant,Unique,Beige-colored</div><!--bg warning-->
       </div>
+
+      <div class="row m-3">
+        <div class="col-sm-6 boldd">Availability:</div><!--bg warning-->
+        <div class="col-sm-6 ">In Stock</div><!--bg warning-->
+      </div>
+
+      <button type="button" class="btn mt-3 btn-primary" routerLink="/cart" style="margin-left:120px;">Add to cart</button>
 
     </div>
   </div>
