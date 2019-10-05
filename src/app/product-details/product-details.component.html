@@ -27,51 +27,44 @@
   </div>
 </div>
 <!--navigation bar ends-->
-<div class="container">
+
+<h1>{{products.id}}</h1>
+<div class="container" >
+  <div *ngFor="let prod of products">
+    <div *ngIf="prod.id==userId">
 <div class="row m-5">
   <div class="col-sm-7  p-5 bg-dark"><!--bg warning-->
-    <img class="imagesizing" src="assets/scenery.jpg">
+    <img class="imagesizing" src="{{prod.productImage}}">
   </div>
 
   <div class="col-sm-5 p-2 py-5"><!--bg warning-->
     <div class="container c5">
 <div class="row m-3">
   <div class="col-sm-6 boldd">Product Id:</div><!--bg warning-->
-  <div class="col-sm-6 ">1</div><!--bg warning-->
+  <div class="col-sm-6 ">{{prod.id}}</div><!--bg warning-->
 </div>
 
       <div class="row m-3 ">
         <div class="col-sm-6 boldd">Product Name:</div><!--bg warning-->
-        <div class="col-sm-6 ">Beanie</div><!--bg warning-->
+        <div class="col-sm-6 ">{{prod.productName}}</div><!--bg warning-->
       </div>
 
       <div class="row m-3">
         <div class="col-sm-6 boldd">Product Price:</div><!--bg warning-->
-        <div class="col-sm-6">Rs 650.00</div><!--bg warning-->
+        <div class="col-sm-6">{{prod.price}}</div><!--bg warning-->
       </div>
 
       <div class="row m-3">
         <div class="col-sm-6 boldd">Product Category:</div><!--bg warning-->
-        <div class="col-sm-6">Clothing</div><!--bg warning-->
+        <div class="col-sm-6">{{prod.productCategory}}</div><!--bg warning-->
       </div>
 
-      <div class="row m-3">
-        <div class="col-sm-6 boldd">Product Material:</div><!--bg warning-->
-        <div class="col-sm-6 ">Wool</div><!--bg warning-->
-      </div>
 
-      <div class="row m-3">
-        <div class="col-sm-6 boldd ">Product Description:</div><!--bg warning-->
-        <div class="col-sm-6 ">Elegant,Unique,Beige-colored</div><!--bg warning-->
-      </div>
-
-      <div class="row m-3">
-        <div class="col-sm-6 boldd">Availability:</div><!--bg warning-->
-        <div class="col-sm-6 ">In Stock</div><!--bg warning-->
-      </div>
       <button type="button" class="btn mt-3 btn-primary" routerLink="/cart" style="margin-left:120px;">Add to cart</button>
 
     </div>
   </div>
 </div>
+</div>
+  </div>
 </div>

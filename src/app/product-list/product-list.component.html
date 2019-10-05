@@ -18,39 +18,76 @@
     <!--side price range bar starts-->
     <div class=" sidebarcolor  col-sm-3">
 
-      <div style="color:#8D8494;" class=" m-4 display-4  row">
-        Price Range
+      <!--category starts-->
+      <div style="color:#8D8494;font-size:40px;font-weight: lighter;" class=" m-4  row">
+       Product Category
       </div>
 
       <div class="row pl-5 mt-3">
-        <label class="containerr"><span class="sidebaritems">Less than Rs 599</span>
-          <input type="checkbox">
+        <label class="containerr"><span class="sidebaritems">Clothing</span>
+          <input type="checkbox" (click)="showClothing()">
           <span class="checkmark"></span>
         </label>
     </div>
 
       <div class="row pl-5 mt-3">
+        <label class="containerr"><span class="sidebaritems">Groceries</span>
+          <input type="checkbox" (click)="showGroceries()">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+
+      <div class="row pl-5 mt-3">
+        <label class="containerr"><span class="sidebaritems">Electronics</span>
+          <input type="checkbox" (click)="showElectronics()">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+
+      <div class="row pl-5 mt-3">
+        <label class="containerr"><span class="sidebaritems">Footwear</span>
+          <input type="checkbox"(click)="showFootwear()">
+          <span class="checkmark"></span>
+        </label>
+
+      </div>
+<!--category ends-->
+      <hr/>
+      <!--price range  starts-->
+      <div style="color:#8D8494;font-size:40px;font-weight: lighter;" class=" m-4 row">
+        Price Range
+      </div>
+
+      <div class="row pl-5 mt-3">
+        <label class="containerr"><span class="sidebaritems">Less than Rs 599</span>
+          <input type="checkbox" (change)="goToPriceRange($event,0,599)">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+
+      <div class="row pl-5 mt-3">
         <label class="containerr"><span class="sidebaritems">Between Rs 599-Rs 999</span>
-          <input type="checkbox" >
+          <input type="checkbox" (change)="goToPriceRange($event,599,999)">
           <span class="checkmark"></span>
         </label>
       </div>
 
       <div class="row pl-5 mt-3">
         <label class="containerr"><span class="sidebaritems">Between Rs 999-Rs 2000</span>
-          <input type="checkbox" >
+          <input type="checkbox" (change)="goToPriceRange($event,999,2000)">
           <span class="checkmark"></span>
         </label>
       </div>
 
       <div class="row pl-5 mt-3">
         <label class="containerr"><span class="sidebaritems">More than Rs 2000</span>
-          <input type="checkbox" >
+          <input type="checkbox" (change)="goToPriceRange($event,2000,52000)">
           <span class="checkmark"></span>
         </label>
       </div>
 
 
+<!--price range ends-->
 
     </div>
     <!--side price range bar ends-->
@@ -58,17 +95,16 @@
     <div class="col-sm-9">
 
       <div class="m-2 d-flex flex-wrap">
-        <div *ngFor="let product of products" class="m-4">
+        <div *ngFor="let prod of product" class="m-4">
           <div class="card elementsAlignedInThree" >
-            <div class="mt-5 mx-auto">
+            <div class="mt-4 mx-auto">
 
 
               <div class="card-body ">
-                <img class="card-img-top mx-4 image pb-3" src={{product.src}}>
-                <div class="prodName pnamecolor">{{product.Name}}</div><br>
-                <div class="prodPrice">{{product.Price}}</div><br>
-                <div class="prodPrice"><a routerLink="/product-details">View Details</a></div><br>
-
+                <img class="card-img-top mx-4 image pb-3" src="{{prod.productImage}}">
+                <div class="prodName mt-2 pnamecolor">{{prod.productName}}</div><br>
+                <div class="prodPrice">Rs {{prod.price}}</div><br>
+                <div class="prodPrice"><button class="btn btn-sm" (click)="goToDetails(prod.id)">View Details</button></div><br>
                 <button type="button" routerLink="/cart" class="btnclass btn-small btn btn-primary">Add to Cart</button>
 
               </div>
@@ -77,7 +113,6 @@
           </div>
         </div>
       </div>
-
 
     </div>
     <!--product lists ends-->

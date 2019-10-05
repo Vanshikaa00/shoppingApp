@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {productItems} from './product.items';
+import {ProductsServiceService} from '../services/products-service.service';
 
 @Component({
   selector: 'app-product-list',
@@ -8,14 +9,58 @@ import {productItems} from './product.items';
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
+   category;
+   items;
+  constructor(private router: Router, private service: ProductsServiceService ) { }
+  // products = productItems;
+  product;
 
-/*  constructor(private router: Router) { }*/
-  constructor() { }
-  products = productItems;
 
   ngOnInit() {
+    this.service.getProducts().subscribe((data) => {
+      this.product = data;
+    });
   }
-/*goToDetails(id) {
-  this.router.navigate(['/product-details'], {queryParams: {id: 1}});
-}*/
+  goToDetails(id: number) {
+    this.router.navigate(['/product-details'], { queryParams: {id}});
+  }
+  goToPriceRange($event, number1: number, number2: number) {
+    this.service.getProductsByRange(number1, number2).subscribe((data) => {
+      this.product = data;
+    });
+  }
+
+/*
+   goToProductCategory($event, category: string) {
+    this.service.getProductsByCategory(category).subscribe((data) => {
+      this.product = data;
+    });
+  }
+*/
+
+  showClothing() {
+  this.category = 'Clothing';
+  this.service.getProductsByCategory('Clothing').subscribe((data1) => {
+    this.product = data1;
+  });
+}
+
+  showGroceries() {
+    this.category = 'Grocery';
+    this.service.getProductsByCategory('Grocery').subscribe((data2) => {
+      this.product = data2;
+    });
+  }
+  showElectronics() {
+    this.category = 'Electronics';
+    this.service.getProductsByCategory('Electronics').subscribe((data3) => {
+      this.product = data3;
+    });
+  }
+  showFootwear() {
+    this.category = 'footwear';
+    this.service.getProductsByCategory('footwear').subscribe((data4) => {
+      this.product = data4;
+    });
+  }
 }

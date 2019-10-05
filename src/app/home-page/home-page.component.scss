@@ -6,7 +6,9 @@ font-weight: lighter;
   margin:0 25px 0 25px;
   font-size: larger;
 }
-
+div{
+  scroll-behavior: smooth;
+}
 .fixingnavbar{
   position:relative;
 }
