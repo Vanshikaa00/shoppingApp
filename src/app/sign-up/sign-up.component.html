@@ -33,18 +33,18 @@
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="text" class="form-control" id="email">
+            <input type="text" name="name" [(ngModel)]="name" class="form-control" id="email">
           </div>
           <div class="form-group">
             <label for="pwd">Password:</label>
-            <input type="password" class="form-control" id="pwd">
+            <input type="password" name="pass" [(ngModel)]="pass" class="form-control" id="pwd">
           </div>
           <div class="form-group form-check">
             <label class="form-check-label">
               <input class="form-check-input" type="checkbox"> Remember me
             </label>
           </div>
-          <button type="submit" class="btn btn-primary">Create</button>
+          <button type="submit" (click)="adduser()"  class="btn btn-primary">Create</button>
           <a href="#" class="pl-3">Log to an existing account</a>
         </form>
 <!--form ends-->

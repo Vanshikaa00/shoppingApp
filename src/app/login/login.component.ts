@@ -10,28 +10,32 @@ import {AppService} from '../app.service';
 })
 export class LoginComponent implements OnInit {
 
-  username ;
+  username;
   password;
   invalidLogin = false;
+
   constructor(private router: Router,
               private service: AppService,
-              private authService: AuthenticationService) { }
+              private authService: AuthenticationService) {
+  }
 
   ngOnInit() {
     if (this.service.checkLogin()) {
       this.router.navigate(['home']);
     }
   }
-login() {
-    (this.authService.authenticate(this.username, this.password).subscribe(
-        data => {
-          this.service.isLoggedIn(true);
-          this.router.navigate(['home']);
-        }
-      )
-    );
-  }
-  logout() {
+  login() {
+   (this.authService.authenticate(this.username, this.password).subscribe(
+          data => {
+            this.service.isLoggedIn(true);
+            this.router.navigate(['home']);
+            this.invalidLogin = false;
+          }
+        )
+      );
+    }
+    logout() {
     this.service.isLoggedIn(false);
+    this.router.navigate(['login']);
   }
-}
+  }

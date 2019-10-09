@@ -13,6 +13,7 @@ import { MyAccountComponent } from './my-account/my-account.component';
 import { ProductAdditionComponent } from './product-addition/product-addition.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {FormsModule} from '@angular/forms';
     SignUpComponent,
     LoginComponent,
     MyAccountComponent,
-    ProductAdditionComponent
+    ProductAdditionComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

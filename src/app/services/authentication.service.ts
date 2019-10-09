@@ -16,7 +16,7 @@ export class AuthenticationService {
   constructor(private http: HttpClient) { }
   authenticate(username, password) {
     const headers = new HttpHeaders({Authorization: 'Basic ' + btoa(username + ':' + password)});
-    return this.http.get('http://localhost:8080/home/getProduct', {headers}).pipe(
+    return this.http.get('http://localhost:8080/login/getUser', {headers}).pipe(
       map(data => {
           sessionStorage.setItem('token', btoa(username + ':' + password));
           return data;
@@ -27,6 +27,9 @@ export class AuthenticationService {
   const user = sessionStorage.getItem('username');
   console.log(!(user === null));
   return !(user === null);
+  }
+  logOut() {
+    sessionStorage.removeItem('username');
   }
 
 }

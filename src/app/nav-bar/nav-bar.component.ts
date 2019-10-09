@@ -10,14 +10,18 @@ import {Router} from '@angular/router';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor( private loginService: AppService, private router: Router) { }
+  constructor( private router: Router,
+               private service: AppService,
+               private authService: AuthenticationService) { }
 
   ngOnInit() {
+   if (!this.service.checkLogin()) {
+      this.router.navigate(['home']);
+    }
   }
-  logout() {
-    this.loginService.isLoggedIn(false);
-    this.router.navigate(['login']);
+ logout() {
+    this.service.isLoggedIn(false);
+    this.router.navigate(['logout']);
   }
-
 
 }

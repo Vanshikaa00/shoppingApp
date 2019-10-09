@@ -7,6 +7,7 @@ import {ProductListComponent} from './product-list/product-list.component';
 import {ProductDetailsComponent} from './product-details/product-details.component';
 import {MyAccountComponent} from './my-account/my-account.component';
 import {ProductAdditionComponent} from './product-addition/product-addition.component';
+import {LogoutComponent} from './logout/logout.component';
 
 export const MAIN_ROUTES: Routes = [
   {
@@ -45,6 +46,10 @@ export const MAIN_ROUTES: Routes = [
   {
     path: 'my-account',
     component: MyAccountComponent,
+  },
+  {
+    path: 'logout',
+    component: LogoutComponent,
   },
   {
     path: '**',
