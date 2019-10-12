@@ -13,6 +13,7 @@
 -->
 
 <app-nav-bar></app-nav-bar>
+
 <div class="container-fluid">
   <div class="row">
     <!--side price range bar starts-->
@@ -20,7 +21,7 @@
 
       <!--category starts-->
       <div style="color:#8D8494;font-size:40px;font-weight: lighter;" class=" m-4  row">
-       Product Category
+        Product Category
       </div>
 
       <div class="row pl-5 mt-3">
@@ -28,7 +29,7 @@
           <input type="checkbox" (click)="showClothing()">
           <span class="checkmark"></span>
         </label>
-    </div>
+      </div>
 
       <div class="row pl-5 mt-3">
         <label class="containerr"><span class="sidebaritems">Groceries</span>
@@ -46,12 +47,11 @@
 
       <div class="row pl-5 mt-3">
         <label class="containerr"><span class="sidebaritems">Footwear</span>
-          <input type="checkbox"(click)="showFootwear()">
+          <input type="checkbox" (click)="showFootwear()">
           <span class="checkmark"></span>
         </label>
-
       </div>
-<!--category ends-->
+      <!--category ends-->
       <hr/>
       <!--price range  starts-->
       <div style="color:#8D8494;font-size:40px;font-weight: lighter;" class=" m-4 row">
@@ -72,6 +72,7 @@
         </label>
       </div>
 
+
       <div class="row pl-5 mt-3">
         <label class="containerr"><span class="sidebaritems">Between Rs 999-Rs 2000</span>
           <input type="checkbox" (change)="goToPriceRange($event,999,2000)">
@@ -87,7 +88,7 @@
       </div>
 
 
-<!--price range ends-->
+      <!--price range ends-->
 
     </div>
     <!--side price range bar ends-->
@@ -96,17 +97,22 @@
 
       <div class="m-2 d-flex flex-wrap">
         <div *ngFor="let prod of product" class="m-4">
-          <div class="card elementsAlignedInThree" >
+          <div class="card elementsAlignedInThree">
             <div class="mt-4 mx-auto">
 
 
               <div class="card-body ">
                 <img class="card-img-top mx-4 image pb-3" src="{{prod.productImage}}">
-                <div class="prodName mt-2 pnamecolor">{{prod.productName}}</div><br>
-                <div class="prodPrice">Rs {{prod.price}}</div><br>
-                <div class="prodPrice"><button class="btn btn-sm" (click)="goToDetails(prod.id)">View Details</button></div><br>
-                <button type="button" routerLink="/cart" class="btnclass btn-small btn btn-primary">Add to Cart</button>
-
+                <div class="prodName mt-2 pnamecolor">{{prod.productName}}</div>
+                <br>
+                <div class="prodPrice">Rs {{prod.price}}</div>
+                <br>
+                <div class="prodPrice"><a href="/product-details/{{prod.productId}}">View Details{{prod.productId}}</a>
+                </div>
+                <br>
+                <button type="button" (click)="goToCart(prod.productId)" class="btnclass btn-small btn btn-primary">Add
+                  to Cart
+                </button>
               </div>
 
             </div>
@@ -118,4 +124,3 @@
     <!--product lists ends-->
   </div>
 </div>
-

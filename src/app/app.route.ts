@@ -32,7 +32,7 @@ export const MAIN_ROUTES: Routes = [
     component: ProductListComponent,
   },
   {
-    path: 'product-details',
+    path: 'product-details/:id',
     component: ProductDetailsComponent,
   },
   {

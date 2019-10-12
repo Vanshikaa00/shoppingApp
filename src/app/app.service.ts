@@ -31,7 +31,7 @@ export class AppService {
   }
   addUser(user) {
     return this.httpClient.post('http://localhost:8080/login/addUser' , user).subscribe(res => {
-      this.router.navigate(['home']);
+      this.router.navigate(['login']);
     });
   }
 }

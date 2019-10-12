@@ -21,8 +21,10 @@ export class ProductListComponent implements OnInit {
       this.product = data;
     });
   }
-  goToDetails(id: number) {
-    this.router.navigate(['/product-details'], { queryParams: {id}});
+  goToCart(prodid: number) {
+    // this.router.navigate(['/cart']);
+    this.service.addProductToCart(prodid).subscribe((data) => {
+    });
   }
   goToPriceRange($event, number1: number, number2: number) {
     this.service.getProductsByRange(number1, number2).subscribe((data) => {

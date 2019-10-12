@@ -10,15 +10,15 @@
 
 <app-nav-bar></app-nav-bar>
 <!--navigation bar starts-->
-<div >
+<div>
   <div class="c22"><!--this c2 is for antelope cave background image-->
     <!--navbar starts-->
     <nav class="navbar navbar-expand-md navbar-light fixingnavbar text-dark">
 
-      <div class="navbar-collapse collapse w-100 " >
+      <div class="navbar-collapse collapse w-100 ">
         <ul class="navbar-nav mr-auto">
           <li class="display-4 p-2 pl-3 nav-item text-light">
-        Product Details
+            Product Details
           </li>
         </ul>
       </div>
@@ -28,43 +28,44 @@
 </div>
 <!--navigation bar ends-->
 
-<h1>{{products.id}}</h1>
-<div class="container" >
+<!--<h1>{{products.id}}</h1>-->
+<div class="container">
   <div *ngFor="let prod of products">
-    <div *ngIf="prod.id==userId">
-<div class="row m-5">
-  <div class="col-sm-7  p-5 bg-dark"><!--bg warning-->
-    <img class="imagesizing" src="{{prod.productImage}}">
-  </div>
+    <div *ngIf="prod.productId==userId">
+    <div class="row m-5">
+        <div class="col-sm-7  p-5 bg-dark"><!--bg warning-->
+          <img class="imagesizing" src="{{prod.productImage}}">
+        </div>
 
-  <div class="col-sm-5 p-2 py-5"><!--bg warning-->
-    <div class="container c5">
-<div class="row m-3">
-  <div class="col-sm-6 boldd">Product Id:</div><!--bg warning-->
-  <div class="col-sm-6 ">{{prod.id}}</div><!--bg warning-->
-</div>
+        <div class="col-sm-5 p-2 py-5"><!--bg warning-->
+          <div class="container c5">
+            <div class="row m-3">
+              <div class="col-sm-6 boldd">Product Id:</div><!--bg warning-->
+              <div class="col-sm-6 ">{{prod.productId}}</div><!--bg warning-->
+            </div>
 
-      <div class="row m-3 ">
-        <div class="col-sm-6 boldd">Product Name:</div><!--bg warning-->
-        <div class="col-sm-6 ">{{prod.productName}}</div><!--bg warning-->
+            <div class="row m-3 ">
+              <div class="col-sm-6 boldd">Product Name:</div><!--bg warning-->
+              <div class="col-sm-6 ">{{prod.productName}}</div><!--bg warning-->
+            </div>
+
+            <div class="row m-3">
+              <div class="col-sm-6 boldd">Product Price:</div><!--bg warning-->
+              <div class="col-sm-6">{{prod.price}}</div><!--bg warning-->
+            </div>
+
+            <div class="row m-3">
+              <div class="col-sm-6 boldd">Product Category:</div><!--bg warning-->
+              <div class="col-sm-6">{{prod.productCategory}}</div><!--bg warning-->
+            </div>
+
+            <!--      (click)="addToCart(prod.id)" use it in below button-->
+            <button type="button" class="btn mt-3 btn-primary" style="margin-left:120px;">Add to cart</button>
+          </div>
+          </div>
+        </div>
       </div>
 
-      <div class="row m-3">
-        <div class="col-sm-6 boldd">Product Price:</div><!--bg warning-->
-        <div class="col-sm-6">{{prod.price}}</div><!--bg warning-->
-      </div>
-
-      <div class="row m-3">
-        <div class="col-sm-6 boldd">Product Category:</div><!--bg warning-->
-        <div class="col-sm-6">{{prod.productCategory}}</div><!--bg warning-->
-      </div>
-
-
-      <button type="button" class="btn mt-3 btn-primary"  (click)="addToCart(product)" style="margin-left:120px;">Add to cart</button>
-
-    </div>
   </div>
-</div>
-</div>
-  </div>
-</div>
+
+

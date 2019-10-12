@@ -48,8 +48,15 @@
 </div>
 <!--banner ends-->
 
-<div *ngFor="let item of items">
+
+
+
+
+
+
 <div class="container "><!--bg danger here-->
+  <div *ngFor="let item of cart">
+
   <table class="table c1 table-bordered">
     <tr>
       <th></th>
@@ -57,52 +64,58 @@
       <th>Product</th>
       <th>Price</th>
       <th>Quantity</th>
-      <th>Total</th>
     </tr>
     <tr>
-      <td><a href="#" class="text-dark">X</a></td>
+      <td><a  class="text-dark" (click)="removeProductFromCart(item.products.productId)">X</a></td>
       <td ><!--bg danger here-->
-        <img src="{{item.productImage}}" height="70px" width="70px">
+        <img src="{{item.products.productImage}}" height="70px" width="70px">
       </td>
-      <td>{{item.productName}}</td>
-      <td>{{item.price}}</td>
+      <td>{{item.products.productName}}</td>
+      <td>{{item.products.price}}</td>
+
       <td>
+
         <div class="container">
-          <button type="button" class="btn btn-outline-secondary">-</button>
-          <button type="button" class="btn">1</button>
-          <button type="button" class="btn btn-outline-secondary">+</button>
+          <button type="button" class="btn btn-outline-secondary" (click)="decreaseQuantityFromCart(item.products.productId)">-</button>
+          <span>{{item.products.productQuantity}}</span>
+          <button type="button" class="btn btn-outline-secondary" (click)="addProductToCart(item.products.productId)">+</button>
         </div>
       </td>
-      <td>Rs 650.00</td>
+
     </tr>
     <tr>
       <td colspan="6">
         <button type="button" style="color:white;" class="btn btn-primary float-right" routerLink="/product-list">Update Cart</button></td>
     </tr>
   </table>
-</div>
-</div>
-
-<div class="container c3 p-5 "><!--bg danger here-->
-<div class="container mx-auto"><!--bg danger here-->
-  <span class="c6">Cart Totals</span>
-
-  <div class="row ">
-    <div class="col-sm-6 "> </div><!--bg danger here-->
-    <div class="col-sm-6 "><!--bg danger here-->
-      <table class="table mx-auto mt-3 table-bordered">
-      <tr>
-        <td class="boldtext">Subtotal</td>
-        <td>Rs 650.00</td>
-      </tr>
-        <tr>
-          <td class="boldtext">Total</td>
-          <td>Rs 650.00</td>
-        </tr>
-      </table>
-      <button type="button" style="float: right;" class="m-3 btn btn-primary">Proceed to checkout</button>
-    </div>
-  </div>
 
 </div>
 </div>
+
+
+
+
+<!--<div class="container c3 p-5 ">&lt;!&ndash;bg danger here&ndash;&gt;-->
+<!--<div class="container mx-auto">&lt;!&ndash;bg danger here&ndash;&gt;-->
+<!--  <span class="c6">Cart Totals</span>-->
+
+<!--  <div class="row ">-->
+<!--    <div class="col-sm-6 "> </div>&lt;!&ndash;bg danger here&ndash;&gt;-->
+<!--    <div class="col-sm-6 ">&lt;!&ndash;bg danger here&ndash;&gt;-->
+<!--      <table class="table mx-auto mt-3 table-bordered">-->
+<!--      <tr>-->
+<!--        <td class="boldtext">Subtotal</td>-->
+<!--        <td>Rs 650.00</td>-->
+<!--      </tr>-->
+<!--        <tr>-->
+<!--          <td class="boldtext">Total</td>-->
+<!--          <td>Rs 650.00</td>-->
+<!--        </tr>-->
+<!--      </table>-->
+<!--      <button type="button" style="float: right;" class="m-3 btn btn-primary">Proceed to checkout</button>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--</div>-->
+<!--</div>-->
+

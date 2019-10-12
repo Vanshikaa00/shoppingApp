@@ -12,6 +12,7 @@ export class ProductDetailsComponent implements OnInit {
 userId;
 products;
   product;
+ List;
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router,
@@ -20,17 +21,29 @@ products;
     ) { }
 
   ngOnInit() {
-    this.activatedRoute.queryParams.subscribe(params => {
+    this.activatedRoute.params.subscribe(params => {
       this.userId = params.id;
+      // this.List = this.allDetailss(this.userId);
+      console.log(this.userId);
     });
     this.productsService.getProducts().subscribe( (data) => {
      this.products = data;
    });
   }
+  //
+  //
+  // allDetailss(id) {
+  //   for ( let i = 0; i < this.products.length; i++)
+  //   {
+  //     if ( this.products[i].productId == id) {
+  //       return this.products[i].productId;
+  //     }
+  //   }
+  // }
 
 
-  addToCart(product) {
+  addToCart(id) {
     window.alert('Your product has been added to the cart!');
-    this.cartService.addToCart(product);
+     // this.cartService.addToCart(id);
   }
 }
