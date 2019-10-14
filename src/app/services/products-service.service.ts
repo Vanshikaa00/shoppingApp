@@ -70,4 +70,15 @@ export class ProductsServiceService {
     return this.httpClient.get('http://localhost:8080/cartoh/checkout/receive', {headers});
   }
 
+  getOrders() {
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders( { Authorization: 'Basic ' + token });
+    return this.httpClient.get('http://localhost:8080/cart/showOrderHistory', {headers});
+  }
+
+ TotalPrice() {
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders( { Authorization: 'Basic ' + token });
+    return this.httpClient.get('http://localhost:8080/cart/price', {headers});
+  }
 }

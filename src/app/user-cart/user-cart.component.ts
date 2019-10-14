@@ -22,15 +22,9 @@ cart;
   ) { }
 
   ngOnInit() {
-    // this.activatedRoute.queryParams.subscribe(params => {
-    //   this.prodid = params.prodid;
-    // });
-    // // this.items = this.cartService.getItems();
-    // this.productService.getProducts().subscribe(data => {
-    //   this.items = data;
-    // });
     this.productService.showCart().subscribe(data => {
       this.cart = data;
+      this.totalPrice();
     });
 
   }
@@ -38,14 +32,17 @@ cart;
     this.productService.removeProductFromCart(pid).subscribe( (data) => {
   this.productService.showCart().subscribe((data1) => {
     this.cart = data1;
+    this.totalPrice();
+
   });
 });
   }
 
   decreaseQuantityFromCart(pid: number) {
-    this.productService.  decreaseQuantityFromCart(pid).subscribe( (data) => {
+    this.productService.decreaseQuantityFromCart(pid).subscribe( () => {
       this.productService.showCart().subscribe((data2) => {
         this.cart = data2;
+        this.totalPrice();
       });
     });
   }
@@ -53,22 +50,28 @@ cart;
     this.productService.addProductToCart(pid).subscribe( (data) => {
       this.productService.showCart().subscribe((data3) => {
         this.cart = data3;
+        this.totalPrice();
+
       });
     });
   }
-
-
-  // addProductToCart(pid: number) {
-  //   this.productService.removeProductFromCart(pid).subscribe( (data) => {
-  //     this.productService.showCart().subscribe((data3) => {
-  //       this.cart = data3;
-  //     });
-  //   });
-  // }
 checkoutTotal() {
     this.productService.getTotal().subscribe((data4) => {
       this.total = data4;
       console.log(this.total);
     });
 }
+totalPrice() {
+    this.productService.TotalPrice().subscribe((data6) => {
+      this.total = data6;
+      console.log(data6);
+    });
+}
+
+goToCheckout() {
+    this.productService.clearCart().subscribe((data5) => {
+    });
+    this.router.navigate(['/checkout']);
+}
+
 }

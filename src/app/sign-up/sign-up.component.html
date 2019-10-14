@@ -22,25 +22,33 @@
           <h5 class="card-title text-center">Sign Up</h5>
 
           <!--form starts-->
-          <form class="pb-4">
-            <div class="form-group">
+          <form class="pb-4 " >
+            <div class="form-group ">
               <label for="fname">First Name:</label>
-              <input type="text" class="form-control" id="fname" required>
-              <!--for validating fname field-----starts---->
+              <input type="text" class="form-control" id="fname" name="fname" [(ngModel)]="fname" value="{{fname}}" required>
 
-              <!--for validating fname-----ends--->
             </div>
             <div class="form-group">
               <label for="lname">Last Name:</label>
-              <input type="text" class="form-control" id="lname">
+              <input type="text" class="form-control" id="lname" name="lname" [(ngModel)]="lname" value="{{lname}}">
+
             </div>
+
+            <div class="form-group">
+              <label for="pno">Phone Number:</label>
+              <input type="text" name="phno" [(ngModel)]="phno"  class="form-control" id="pno">
+
+            </div>
+
             <div class="form-group">
               <label for="email">Email</label>
               <input type="text" name="name" [(ngModel)]="name" class="form-control" id="email">
+
             </div>
             <div class="form-group">
               <label for="pwd">Password:</label>
               <input type="password" name="pass" [(ngModel)]="pass" class="form-control" id="pwd">
+
             </div>
             <div class="form-group form-check">
               <label class="form-check-label">

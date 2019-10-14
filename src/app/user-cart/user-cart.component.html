@@ -9,12 +9,12 @@
 
 <app-nav-bar></app-nav-bar>
 <!--banner starts-->
-<div >
+<div>
   <div class="c2"><!--this c2 is for antelope cave background image-->
     <!--navbar starts-->
     <nav class="navbar navbar-expand-md navbar-light fixingnavbar text-dark">
 
-      <div class="navbar-collapse collapse w-100 " >
+      <div class="navbar-collapse collapse w-100 ">
         <ul class="navbar-nav mr-auto">
           <li class="display-4 p-2 pl-5 nav-item text-light">
             My Cart
@@ -38,7 +38,7 @@
             <a class="text-light">/</a>
           </li>
           <li class="nav-item ">
-            <a routerLink="/product-list"  class="itemstyling">Back to products list</a>
+            <a routerLink="/product-list" class="itemstyling">Back to products list</a>
           </li>
         </ul>
       </div>
@@ -49,87 +49,83 @@
 <!--banner ends-->
 
 
-
-
-
-
-
 <div class="container "><!--bg danger here-->
   <div *ngFor="let item of cart">
 
-  <table class="table c1 table-bordered">
-    <tr>
-      <th></th>
-      <th></th>
-      <th>Product</th>
-      <th>Price</th>
-      <th>Quantity</th>
-    </tr>
-    <tr>
-      <td><a  class="text-dark" (click)="removeProductFromCart(item.products.productId)">X</a></td>
-      <td ><!--bg danger here-->
-        <img src="{{item.products.productImage}}" height="70px" width="70px">
-      </td>
-      <td>{{item.products.productName}}</td>
-      <td>{{item.products.price}}</td>
-
-      <td>
-
-        <div class="container">
-          <button type="button" class="btn btn-outline-secondary" (click)="decreaseQuantityFromCart(item.products.productId)">-</button>
-          <span class="mx-2"> {{item.quantity}}</span>
-          <button type="button" class="btn btn-outline-secondary" (click)="addProductToCart(item.products.productId)">+</button>
-        </div>
-      </td>
-
-    </tr>
-<!--    <tr>-->
-<!--      <td colspan="6">-->
-<!--        <button type="button" style="color:white;" class="btn btn-primary float-right" routerLink="/product-list">Update Cart</button></td>-->
-<!--    </tr>-->
-  </table>
-
-</div>
-</div>
-
-
-
-
-<div class="container c3 p-5 "><!--bg danger here-->
-<div class="container mx-auto"><!--bg danger here-->
-  <span class="c6">Cart Totals</span>
-
-  <div class="row ">
-    <div class="col-sm-6 "> </div><!--bg danger here-->
-    <div class="col-sm-6 "><!--bg danger here-->
-      <table class="table mx-auto mt-3 table-bordered">
+    <table class="table c1 table-bordered">
       <tr>
-        <td class="boldtext">Subtotal</td>
-        <td>Rs {{total}}</td>
+        <th></th>
+        <th></th>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
       </tr>
-        <tr>
-          <td class="boldtext">Total</td>
-          <td>Rs {{total}}</td>
-        </tr>
-        <tr>
-      </table>
+      <tr>
+        <td><a class="text-dark" (click)="removeProductFromCart(item.products.productId)">X</a></td>
+        <td><!--bg danger here-->
+          <img src="{{item.products.productImage}}" height="70px" width="70px">
+        </td>
+        <td>{{item.products.productName}}</td>
+        <td>{{item.products.price}}</td>
 
-<div class=" p-1">
-<div class=" m-3 p-3">
-  <button type="button" style="color:white;" class="btn btn-primary float-right" routerLink="/product-list">Update Cart</button>
+        <td>
 
-</div>
-  <div class=" m-3 p-3">
-    <button type="button"  class=" btn btn-primary  float-right" (click)="checkoutTotal()">Proceed to checkout</button>
+          <div class="container">
+            <button type="button" class="btn btn-outline-secondary"
+                    (click)="decreaseQuantityFromCart(item.products.productId)">-
+            </button>
+            <span class="mx-2"> {{item.quantity}}</span>
+            <button type="button" class="btn btn-outline-secondary" (click)="addProductToCart(item.products.productId)">
+              +
+            </button>
+          </div>
+        </td>
+      </tr>
+      <!--    <tr>-->
+      <!--      <td colspan="6">-->
+      <!--        <button type="button" style="color:white;" class="btn btn-primary float-right" routerLink="/product-list">Update Cart</button></td>-->
+      <!--    </tr>-->
+    </table>
 
- </div>
-</div>
+
+  </div>
+
+
+  <div class="container c3 p-5 "><!--bg danger here-->
+    <div class="container mx-auto"><!--bg danger here-->
+      <span class="c6">Cart Totals</span>
+
+      <div class="row ">
+        <div class="col-sm-6 "></div><!--bg danger here-->
+        <div class="col-sm-6 "><!--bg danger here-->
+          <table class="table mx-auto mt-3 table-bordered">
+            <tr>
+              <td class="boldtext">Subtotal</td>
+              <td>Rs {{total}}</td>
+            </tr>
+            <tr>
+              <td class="boldtext">Total</td>
+              <td>Rs {{total}}</td>
+            </tr>
+            <tr>
+          </table>
+
+          <div class=" p-1">
+            <div class=" m-3 p-3">
+              <button type="button" style="color:white;" class="btn btn-primary float-right"  (click)="checkoutTotal()">Get Total</button>
+            </div>
+            <div class=" m-3 p-3">
+              <button type="button" class=" btn btn-primary  float-right" (click)="goToCheckout()">Proceed to checkout
+              </button>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
 
     </div>
   </div>
-
 </div>
-</div>
-
 <!--<button type="button" style="color:white;" class="btn btn-primary float-right" routerLink="/product-list">Update Cart</button>-->
 <!--<button type="button"  class=" btn btn-primary  float-right">Proceed to checkout</button>-->

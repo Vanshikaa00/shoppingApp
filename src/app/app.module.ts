@@ -15,6 +15,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormGroup, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { LogoutComponent } from './logout/logout.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { OrderhistoryComponent } from './orderhistory/orderhistory.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -31,7 +33,9 @@ import { CheckoutComponent } from './checkout/checkout.component';
     MyAccountComponent,
     ProductAdditionComponent,
     LogoutComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    OrderhistoryComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

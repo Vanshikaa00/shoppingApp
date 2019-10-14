@@ -16,7 +16,7 @@ export class SignUpComponent implements OnInit {
   model: any = {};
   name;
   pass;
-
+phno;
   constructor(
     private service: AuthenticationService,
     private appService: AppService,
@@ -28,6 +28,8 @@ export class SignUpComponent implements OnInit {
   url = 'http://localhost:8080/login/addUser';
 
   formValidate = true;
+  myp;
+  person;
 
   ngOnInit() {
 
@@ -36,6 +38,9 @@ export class SignUpComponent implements OnInit {
   adduser() {
     console.log(this.name);
     const user = {
+      fname: this.fname,
+      lname: this.lname,
+      phno: this.phno,
       username: this.name,
       password: this.pass
     };
