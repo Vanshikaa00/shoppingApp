@@ -94,8 +94,16 @@
     <!--side price range bar ends-->
     <!--product lists starts-->
     <div class="col-sm-9">
+      <!--search bar starts-->
+<div class="row  p-3" style="background-color: #F7F8FB">
+  <form class="mx-auto form-inline navbar-form pull-right">
+     <input class="form-control" type="text" placeholder="Search">
+     <button class="btn btn-primary ml-1" type="submit">Search</button>
+   </form>
+</div>
+      <!--search bar ends-->
 
-      <div class="m-2 d-flex flex-wrap">
+      <div class="row m-2 d-flex flex-wrap">
         <div *ngFor="let prod of product" class="m-4">
           <div class="card elementsAlignedInThree">
             <div class="mt-4 mx-auto">

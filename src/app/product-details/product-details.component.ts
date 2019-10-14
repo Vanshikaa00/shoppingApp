@@ -30,6 +30,12 @@ products;
      this.products = data;
    });
   }
+
+  goToCart(prodid: number) {
+    // this.router.navigate(['/cart']);
+    this.productsService.addProductToCart(prodid).subscribe((data) => {
+    });
+  }
   //
   //
   // allDetailss(id) {

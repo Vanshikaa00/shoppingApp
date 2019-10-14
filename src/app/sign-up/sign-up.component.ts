@@ -3,6 +3,7 @@ import {AuthenticationService} from '../services/authentication.service';
 import {Router} from '@angular/router';
 import {AppService} from '../app.service';
 import { HttpClient} from '@angular/common/http';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-sign-up',
@@ -12,13 +13,15 @@ import { HttpClient} from '@angular/common/http';
 export class SignUpComponent implements OnInit {
   fname;
   lname;
-name;
+  model: any = {};
+  name;
   pass;
 
   constructor(
     private service: AuthenticationService,
     private appService: AppService,
     private router: Router,
+    private formBuilder: FormBuilder,
     private httpClient: HttpClient) {
   }
 
@@ -27,6 +30,7 @@ name;
   formValidate = true;
 
   ngOnInit() {
+
   }
 
   adduser() {
@@ -37,31 +41,8 @@ name;
     };
     this.appService.addUser(user);
   }
+
 }
-  // submitData() {
-  //   if (
-  //     this.fname === undefined ||
-  //     this.lname === undefined ||
-  //     this.email === undefined ||
-  //     this.password === undefined
-  //   ) {
-  //     this.formValidate = false;
-  //   } else {
-  //     this.formValidate = true;
-  //   }
-  //   if (this.formValidate) {
-  //     const json = {
-  //       fname: this.fname,
-  //       lname: this.lname,
-  //       email: this.email,
-  //       password: this.password
-  //     };
-  //   }
-  //   this.httpClient.post(this.url, json).subscribe(res => {
-  //     console.log('Signup post successful!');
-  //     this.router.navigate(['/login']);
-  //   });
-  // }
  /*
 signedUp() {
   this.service.isUserLoggedIn();

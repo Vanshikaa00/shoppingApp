@@ -22,36 +22,38 @@
           <h5 class="card-title text-center">Sign Up</h5>
 
           <!--form starts-->
-        <form class="pb-4">
-          <div class="form-group">
-            <label for="fname">First Name:</label>
-            <input type="text" class="form-control" id="fname">
-          </div>
-          <div class="form-group">
-            <label for="lname">Last Name:</label>
-            <input type="text" class="form-control" id="lname">
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="text" name="name" [(ngModel)]="name" class="form-control" id="email">
-          </div>
-          <div class="form-group">
-            <label for="pwd">Password:</label>
-            <input type="password" name="pass" [(ngModel)]="pass" class="form-control" id="pwd">
-          </div>
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="checkbox"> Remember me
-            </label>
-          </div>
-          <button type="submit" (click)="adduser()"  class="btn btn-primary">Create</button>
-          <a href="#" class="pl-3">Log to an existing account</a>
-        </form>
-<!--form ends-->
+          <form class="pb-4">
+            <div class="form-group">
+              <label for="fname">First Name:</label>
+              <input type="text" class="form-control" id="fname" required>
+              <!--for validating fname field-----starts---->
+
+              <!--for validating fname-----ends--->
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name:</label>
+              <input type="text" class="form-control" id="lname">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="text" name="name" [(ngModel)]="name" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+              <label for="pwd">Password:</label>
+              <input type="password" name="pass" [(ngModel)]="pass" class="form-control" id="pwd">
+            </div>
+            <div class="form-group form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox"> Remember me
+              </label>
+            </div>
+            <button type="submit" (click)="adduser()"  class="btn btn-primary">Create</button>
+            <a href="#" class="pl-3">Log to an existing account</a>
+          </form>
+          <!--form ends-->
 
         </div>
       </div>
     </div>
   </div>
 </div>
-

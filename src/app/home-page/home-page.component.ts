@@ -11,7 +11,9 @@ import {AppService} from '../app.service';
 export class HomePageComponent implements OnInit {
   private items;
 
-  constructor(private service: AppService , private http: ProductsServiceService , private router: Router) { }
+
+  constructor(private service: AppService , private http: ProductsServiceService , private router: Router) {
+  }
   ngOnInit() {
     if (!this.service.checkLogin()) {
       this.router.navigate(['login']);

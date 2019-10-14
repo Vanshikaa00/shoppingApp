@@ -13,34 +13,83 @@
 
 <!--home page navbar starts-->
 <!--navbar container starts-->
-<div class="d-flex colorgrey">
+<div class="d-flex colorgrey col-sm-12 ">
 
   <!--menus start-->
+
   <div class="p-2">
-    <nav class="navbar navbar-expand-sm colorgrey" style="max-width:100%; ">
+    <nav class="navbar navbar-default navbar-left navbar-expand-sm colorgrey" style="max-width:100%; ">
       <ul class="navbar-nav">
-        <li class="nav-item liststyling"><a class="nav-link text-dark" >Home</a></li>
-        <li class="nav-item liststyling"><a class="nav-link text-dark" href="/home#id1">Clothing</a></li>
-        <li class="nav-item liststyling"><a class="nav-link text-dark" href="/home#id2">Groceries</a></li>
-        <li class="nav-item liststyling"><a class="nav-link text-dark" href="/home#id3">Electronics</a></li>
-        <li class="nav-item liststyling"><a class="nav-link text-dark" href="/home#id4">Footwear</a></li>
+        <li class="nav-item liststyling col-sm-2"><a class="nav-link text-dark" >Home</a></li>
+        <li class="nav-item liststyling col-sm-2"><a class="nav-link text-dark" href="/home#id1">Clothing</a></li>
+        <li class="nav-item liststyling col-sm-2"><a class="nav-link text-dark" href="/home#id2">Groceries</a></li>
+        <li class="nav-item liststyling col-sm-2"><a class="nav-link text-dark" href="/home#id3">Electronics</a></li>
+        <li class="nav-item liststyling col-sm-2"><a class="nav-link text-dark" href="/home#id4">Footwear</a></li>
       </ul>
     </nav>
   </div>
   <!--menus end-->
 
-  <!--search bar starts-->
-  <div class="p-2 my-3 mr-5 ml-auto ">
-    <form class="form-inline" action="/action_page.php">
-      <input class="form-control" type="text" placeholder="Search">
-      <button class="btn btn-secondary btn-sm" type="button"><i class="material-icons ">search</i></button>
-    </form>
-  </div>
-  <!--search bar ends-->
+<!--  &lt;!&ndash;search bar starts&ndash;&gt;-->
+<!--  <div class="p-2 my-3 mr-5 ml-auto navbar-right">-->
+<!--    <form class="form-inline" >-->
+<!--      <input class="form-control " type="text" placeholder="Search">-->
+<!--      <button class="btn btn-secondary btn-sm" type="button"><i class="material-icons ">search</i></button>-->
+<!--    </form>-->
+<!--  </div>-->
+
+<!--  &lt;!&ndash;search bar ends&ndash;&gt;-->
 
 </div>
 <!--navbar container ends-->
 
+<!--&lt;!&ndash;navbar container 2 starts&ndash;&gt;-->
+<!--<div class="container" >-->
+<!--  <div class="row">-->
+<!--    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">-->
+<!--      <nav class="navbar navbar-dark bg-inverse">-->
+<!--        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#CollapseNavbar">-->
+<!--          &#9776;-->
+<!--        </button>-->
+
+<!--        <div class="collapse navbar-toggleable-xs" id="CollapseNavbar">-->
+<!--          <a class="navbar-brand" href="#">Company Logo</a>-->
+
+<!--          <ul class="nav navbar-nav">-->
+<!--            <li class="nav-item active">-->
+<!--              <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>-->
+<!--            </li>-->
+
+<!--            <li class="nav-item ">-->
+<!--              <a class="nav-link" href="#">Features</a>-->
+<!--            </li>-->
+
+<!--            <li class="nav-item ">-->
+<!--              <a class="nav-link" href="#">Features</a>-->
+<!--            </li>-->
+
+<!--            <li class="nav-item ">-->
+<!--              <a class="nav-link" href="#">Features</a>-->
+<!--            </li>-->
+
+<!--            <li class="nav-item ">-->
+<!--              <a class="nav-link" href="#">Features</a>-->
+<!--            </li>-->
+
+
+<!--          </ul>-->
+
+<!--          <form class="form-inline navbar-form pull-right">-->
+<!--          <input class="form-control" type="text" placeholder="Search">-->
+<!--            <button class="btn btn-success-outline" type="submit">Search</button>-->
+<!--          </form>-->
+<!--        </div>-->
+
+<!--      </nav>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--&lt;!&ndash;navbar container 2 ends&ndash;&gt;-->
 
 <div id="container" class="fixingimg">
   <img id="someimg"  src="assets/cloth3.jpg">
@@ -100,7 +149,7 @@
     </div>
 
 
-<button type="button" class="btn  text-dark textstyling2">Discover more</button>
+<button type="button" routerLink="/product-list" class="btn  text-dark textstyling2 d-flex justify-content-center d-md-table mx-auto">Discover more</button>
     </span>
   </div>
 </div>

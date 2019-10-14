@@ -12,8 +12,11 @@ import { LoginComponent } from './login/login.component';
 import { MyAccountComponent } from './my-account/my-account.component';
 import { ProductAdditionComponent } from './product-addition/product-addition.component';
 import {HttpClientModule} from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
+import {FormGroup, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { LogoutComponent } from './logout/logout.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+
+
 
 @NgModule({
   declarations: [
@@ -27,12 +30,14 @@ import { LogoutComponent } from './logout/logout.component';
     LoginComponent,
     MyAccountComponent,
     ProductAdditionComponent,
-    LogoutComponent
+    LogoutComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
     FormsModule
   ],
   providers: [],

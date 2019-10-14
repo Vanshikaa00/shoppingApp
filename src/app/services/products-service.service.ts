@@ -64,4 +64,10 @@ export class ProductsServiceService {
 
   }
 
+  getTotal() {
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders( { Authorization: 'Basic ' + token });
+    return this.httpClient.get('http://localhost:8080/cartoh/checkout/receive', {headers});
+  }
+
 }

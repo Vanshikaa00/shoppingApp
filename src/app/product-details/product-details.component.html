@@ -60,7 +60,8 @@
             </div>
 
             <!--      (click)="addToCart(prod.id)" use it in below button-->
-            <button type="button" class="btn mt-3 btn-primary" style="margin-left:120px;">Add to cart</button>
+            <button type="button" class="btn mt-3 btn-primary" style="margin-left:120px;" (click)="goToCart(prod.productId)">
+              Add to cart</button>
           </div>
           </div>
         </div>

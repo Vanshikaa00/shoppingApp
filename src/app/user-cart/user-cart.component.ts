@@ -13,6 +13,7 @@ items;
 prodid;
 item;
 cart;
+  total;
   constructor(
     private cartService: CartService,
     private productService: ProductsServiceService,
@@ -42,18 +43,32 @@ cart;
   }
 
   decreaseQuantityFromCart(pid: number) {
-    this.productService.removeProductFromCart(pid).subscribe( (data) => {
+    this.productService.  decreaseQuantityFromCart(pid).subscribe( (data) => {
       this.productService.showCart().subscribe((data2) => {
         this.cart = data2;
       });
     });
   }
-
   addProductToCart(pid: number) {
-    this.productService.removeProductFromCart(pid).subscribe( (data) => {
+    this.productService.addProductToCart(pid).subscribe( (data) => {
       this.productService.showCart().subscribe((data3) => {
         this.cart = data3;
       });
     });
   }
+
+
+  // addProductToCart(pid: number) {
+  //   this.productService.removeProductFromCart(pid).subscribe( (data) => {
+  //     this.productService.showCart().subscribe((data3) => {
+  //       this.cart = data3;
+  //     });
+  //   });
+  // }
+checkoutTotal() {
+    this.productService.getTotal().subscribe((data4) => {
+      this.total = data4;
+      console.log(this.total);
+    });
+}
 }
