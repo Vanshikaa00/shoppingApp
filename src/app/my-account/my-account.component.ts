@@ -31,8 +31,13 @@ edit() {
     this.disabled = false;
   }
 
-  // updateProfile() {
-  //   this.http.updateprofile(this.myp, this.myp.userId).subscribe((data) => {
-  //   });
-  // }
+
+  editprofile() {
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders({Authorization: 'Basic ' + token});
+    return this.http.put(this.url, this.myp, {headers}).subscribe(data => {
+      console.log(data);
+      this.router.navigate(['/my-account']);
+    });
+  }
 }

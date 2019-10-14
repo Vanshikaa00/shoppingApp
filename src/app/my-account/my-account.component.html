@@ -70,30 +70,55 @@
   <!--side table ends-->
 
   <!--my account starts-->
-
   <div class="col-sm-8 " *ngIf="myp">
     <table class="table table-bordered">
       <tr>
         <td>First Name:</td>
-        <td>{{myp.fname}}</td>
+        <td><input type="text" name="fname" [(ngModel)]="myp.fname" value="{{myp.fname}}"></td>
       </tr>
       <tr>
         <td>Last Name:</td>
-        <td>{{myp.lname}}</td>
+        <td><input type="text" name="lname" [(ngModel)]="myp.lname" value="{{myp.lname}}"></td>
       </tr>
       <tr>
         <td>Email:</td>
-        <td>{{myp.username}}</td>
+        <td><input type="text" name="username" [(ngModel)]="myp.username" value="{{myp.username}}"></td>
       </tr>
       <tr>
         <td>Phone No:</td>
-        <td>{{myp.phno}}</td>
+        <td><input type="text" name="phno" [(ngModel)]="myp.phno" value="{{myp.phno}}"></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button class="btn btn-primary" (click)="editprofile()">Update Profile</button>
+        </td>
       </tr>
     </table>
   </div>
-
-
 <!--my account ends-->
 </div>
 </div>
 </div>
+
+
+
+<!--<div class="col-sm-8 " *ngIf="myp">-->
+<!--  <table class="table table-bordered">-->
+<!--    <tr>-->
+<!--      <td>First Name:</td>-->
+<!--      <td>{{myp.fname}}</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td>Last Name:</td>-->
+<!--      <td>{{myp.lname}}</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td>Email:</td>-->
+<!--      <td>{{myp.username}}</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td>Phone No:</td>-->
+<!--      <td>{{myp.phno}}</td>-->
+<!--    </tr>-->
+<!--  </table>-->
+<!--</div>-->
