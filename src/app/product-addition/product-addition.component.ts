@@ -43,6 +43,7 @@ export class ProductAdditionComponent implements OnInit {
     console.log(json);
     this.productsService.addProductToCart(json).subscribe((data1) => {
     });
+    alert('Product added!');
   }
 
   update1(value: any) {

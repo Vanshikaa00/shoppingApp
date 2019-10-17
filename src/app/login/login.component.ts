@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
           }
         )
       );
+   alert('Welcome to Alomos, ' + this.username);
     }
     logout() {
     this.service.isLoggedIn(false);

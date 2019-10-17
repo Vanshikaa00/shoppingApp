@@ -59,6 +59,7 @@ checkoutTotal() {
       this.total = data4;
       console.log(this.total);
     });
+    alert('Please proceed to checkout now!');
 }
 
 gettotal() {

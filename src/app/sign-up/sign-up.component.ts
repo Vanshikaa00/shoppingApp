@@ -45,6 +45,7 @@ phno;
       password: this.pass
     };
     this.appService.addUser(user);
+    alert('Hello ' + this.fname + this.lname + ' your account has been created. You can login now!');
   }
 
 }

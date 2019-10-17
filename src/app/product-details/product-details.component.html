@@ -23,6 +23,26 @@
         </ul>
       </div>
 
+      <div class="navbar-collapse collapse w-100 pr-5">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a href="#" class="itemstyling">Alomos</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="text-light">/</a>
+          </li>
+          <li class="nav-item ">
+            <a routerLink="/home" class="itemstyling">Home</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="text-light">/</a>
+          </li>
+          <li class="nav-item ">
+            <a routerLink="/product-list"  class="itemstyling">Go to products-list</a>
+          </li>
+        </ul>
+      </div>
+
     </nav>
   </div>
 </div>
@@ -33,7 +53,7 @@
   <div *ngFor="let prod of products">
     <div *ngIf="prod.productId==userId">
     <div class="row m-5">
-        <div class="col-sm-7  p-5 bg-dark"><!--bg warning-->
+        <div class="col-sm-7  p-5 " style="background-color: #F7F8FB;"><!--bg warning-->
           <img class="imagesizing" src="{{prod.productImage}}">
         </div>
 
@@ -51,7 +71,7 @@
 
             <div class="row m-3">
               <div class="col-sm-6 boldd">Product Price:</div><!--bg warning-->
-              <div class="col-sm-6">{{prod.price}}</div><!--bg warning-->
+              <div class="col-sm-6">Rs.{{prod.price}}</div><!--bg warning-->
             </div>
 
             <div class="row m-3">

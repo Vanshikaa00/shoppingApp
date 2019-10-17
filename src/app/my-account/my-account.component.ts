@@ -35,6 +35,7 @@ edit() {
   editprofile() {
     const token = sessionStorage.getItem('token');
     const headers = new HttpHeaders({Authorization: 'Basic ' + token});
+    alert('Profile updated!');
     return this.http.put(this.url, this.myp, {headers}).subscribe(data => {
       console.log(data);
       this.router.navigate(['/my-account']);

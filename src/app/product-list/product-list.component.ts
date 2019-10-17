@@ -25,6 +25,7 @@ export class ProductListComponent implements OnInit {
     // this.router.navigate(['/cart']);
     this.service.addProductToCartt(prodid).subscribe((data) => {
     });
+    alert('Added to cart!');
   }
   goToPriceRange($event, number1: number, number2: number) {
     this.service.getProductsByRange(number1, number2).subscribe((data) => {

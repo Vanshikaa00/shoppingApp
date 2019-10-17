@@ -38,7 +38,7 @@
             <a class="text-light">/</a>
           </li>
           <li class="nav-item ">
-            <a routerLink="/product-list" class="itemstyling">Back to products list</a>
+            <a routerLink="/product-list" class="itemstyling">Go to products-list</a>
           </li>
         </ul>
       </div>
@@ -103,15 +103,20 @@
               <td>Rs {{total}}</td>
             </tr>
             <tr>
+              <td class="boldtext">Shipping Charges</td>
+              <td>+ Rs 250</td>
+            </tr>
+            <tr>
               <td class="boldtext">Total</td>
-              <td>Rs {{total}}</td>
+              <td>Rs {{total+250}}</td>
             </tr>
             <tr>
           </table>
 
           <div class=" p-1">
             <div class=" m-3 p-3">
-              <button type="button" style="color:white;" class="btn btn-primary float-right"  (click)="checkoutTotal()">Get Total</button>
+              <button type="button" style="color:white;" class="btn btn-primary float-right"  (click)="checkoutTotal()">
+                Pay Amount</button>
             </div>
             <div class=" m-3 p-3">
               <button type="button" class=" btn btn-primary  float-right" (click)="goToCheckout()">Proceed to checkout
