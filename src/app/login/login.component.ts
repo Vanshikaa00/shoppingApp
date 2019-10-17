@@ -33,7 +33,11 @@ export class LoginComponent implements OnInit {
           }
         )
       );
+   if (this.invalidLogin == true) {
+     alert('Incorrect email or password');
+   } else {
    alert('Welcome to Alomos, ' + this.username);
+   }
     }
     logout() {
     this.service.isLoggedIn(false);

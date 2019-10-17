@@ -3,6 +3,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {ProductsServiceService} from '../services/products-service.service';
 import {CartService} from '../cart.service';
 import {AppService} from '../app.service';
+import {MyaccountService} from '../myaccount.service';
 
 @Component({
   selector: 'app-product-details',
@@ -14,12 +15,15 @@ userId;
 products;
   product;
  List;
+  user;
+  role;
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router,
     private cartService: CartService,
     private productsService: ProductsServiceService,
-    private appservice: AppService
+    private appservice: AppService,
+    private myaccountservice: MyaccountService
     ) { }
 
   ngOnInit() {
@@ -31,6 +35,20 @@ products;
     this.productsService.getProducts().subscribe( (data) => {
      this.products = data;
    });
+
+    this.myaccountservice.getProfile().subscribe(data => {
+      console.log(data);
+      this.user = data;
+      this.role = this.user.role;
+    });
+
+  }
+  isAdmin() {
+    if (this.role == 'admin') {
+      return true;
+    } else {
+      return false;
+    }
   }
  editProduct(productid) {
     this.appservice.edit(true);
@@ -46,6 +64,7 @@ products;
     // this.router.navigate(['/cart']);
     this.productsService.addProductToCartt(prodid).subscribe((data) => {
     });
+
   }
   //
   //

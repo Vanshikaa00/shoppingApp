@@ -82,7 +82,7 @@
             <!--      (click)="addToCart(prod.id)" use it in below button-->
             <button type="button" class="btn mt-3 btn-primary" style="margin-left:120px;" (click)="goToCart(prod.productId)">
               Add to cart</button>
-            <button type="button" class="btn mt-3 btn-primary ml-3" (click)="editProduct(prod.productId)" >Edit Product</button>
+            <button type="button" class="btn mt-3 btn-primary ml-3" *ngIf="isAdmin()" (click)="editProduct(prod.productId)" >Edit Product</button>
           </div>
           </div>
         </div>
