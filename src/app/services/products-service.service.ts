@@ -30,12 +30,20 @@ export class ProductsServiceService {
     return this.httpClient.get('http://localhost:8080/home/getProductByCategory/' + category, {headers});
   }
 
-  addProductToCart(productid) {
-    console.log(productid);
+  addProductToCart(data) {
+    console.log(data);
     const token = sessionStorage.getItem('token');
     const headers = new HttpHeaders( { Authorization: 'Basic ' + token });
-    return this.httpClient.get('http://localhost:8080/cart/addproduct/receive/' + productid, {headers});
+    return this.httpClient.post('http://localhost:8080/home/addProduct' , data , {headers});
   }
+
+  //
+  // addProductToTable() {
+  //   console.log();
+  //   const token = sessionStorage.getItem('token');
+  //   const headers = new HttpHeaders( { Authorization: 'Basic ' + token });
+  //   return this.httpClient.get('http://localhost:8080/home/addProduct', {headers});
+  // }
 
   removeProductFromCart(productid) {
     const token = sessionStorage.getItem('token');
