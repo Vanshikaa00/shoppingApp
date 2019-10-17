@@ -67,12 +67,11 @@
         </td>
         <td>{{item.products.productName}}</td>
         <td>{{item.products.price}}</td>
-
         <td>
-
           <div class="container">
             <button type="button" class="btn btn-outline-secondary"
-                    (click)="decreaseQuantityFromCart(item.products.productId)">-
+                    (click)="decreaseQuantityFromCart(item.products.productId)">
+              -
             </button>
             <span class="mx-2"> {{item.quantity}}</span>
             <button type="button" class="btn btn-outline-secondary" (click)="addProductToCart(item.products.productId)">

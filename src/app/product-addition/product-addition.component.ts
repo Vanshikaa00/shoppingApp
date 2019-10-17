@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ProductsServiceService} from '../services/products-service.service';
 import {Router} from '@angular/router';
+import {AppService} from '../app.service';
 
 @Component({
   selector: 'app-product-addition',
@@ -14,8 +15,12 @@ export class ProductAdditionComponent implements OnInit {
   productimage;
    price;
    productquantity;
+  productId;
 
-  constructor(private productsService: ProductsServiceService, private router: Router) { }
+  constructor(
+    private productsService: ProductsServiceService,
+    private router: Router,
+    private service: AppService) { }
 
   ngOnInit() {
     this.productsService.getProducts().subscribe((data) => {
@@ -28,10 +33,10 @@ export class ProductAdditionComponent implements OnInit {
   }
   addproduct() {
     const json = {
-      product_name: this.productname ,
-      product_category: this.productcategory,
-     product_image: this.productimage ,
-      product_quantity: this.productquantity,
+      productName: this.productname ,
+      productCategory: this.productcategory,
+     productImage: this.productimage ,
+      productQuantity: this.productquantity,
       price: this.price ,
       active: 1
     };
@@ -61,5 +66,26 @@ export class ProductAdditionComponent implements OnInit {
     this.productimage = value;
   }
 
+  update6(value: any) {
+    this.productId = value;
+  }
+  edit() {
+this.productsService.editProduct(this.productId, {
+  productId: this.productId,
+  productName: this.productname ,
+  productCategory: this.productcategory,
+  productImage: this.productimage ,
+  productQuantity: this.productquantity,
+  price: this.price ,
+  active: 1
+}).subscribe( (data) => {
+  localStorage.removeItem('edit');
+  this.router.navigate(['/product-details'], {
+    queryParams: {
+      product_id: this.productId
+    }
+  });
+});
+  }
 
 }

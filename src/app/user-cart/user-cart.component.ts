@@ -24,7 +24,7 @@ cart;
   ngOnInit() {
     this.productService.showCart().subscribe(data => {
       this.cart = data;
-      this.totalPrice();
+      this.gettotal();
     });
 
   }
@@ -32,8 +32,7 @@ cart;
     this.productService.removeProductFromCart(pid).subscribe( (data) => {
   this.productService.showCart().subscribe((data1) => {
     this.cart = data1;
-    this.totalPrice();
-
+    this.gettotal();
   });
 });
   }
@@ -42,15 +41,15 @@ cart;
     this.productService.decreaseQuantityFromCart(pid).subscribe( () => {
       this.productService.showCart().subscribe((data2) => {
         this.cart = data2;
-        this.totalPrice();
+        this.gettotal();
       });
     });
   }
   addProductToCart(pid: number) {
-    this.productService.addProductToCart(pid).subscribe( (data) => {
+    this.productService.addProductToCartt(pid).subscribe( (data) => {
       this.productService.showCart().subscribe((data3) => {
         this.cart = data3;
-        this.totalPrice();
+        this.gettotal();
 
       });
     });
@@ -60,6 +59,14 @@ checkoutTotal() {
       this.total = data4;
       console.log(this.total);
     });
+}
+
+gettotal() {
+    this.total = 0;
+    for (let i = 0; i < this.cart.length; i++) {
+      this.total += this.cart[i].products.price * this.cart[i].quantity;
+    }
+    console.log(this.total);
 }
 totalPrice() {
     this.productService.TotalPrice().subscribe((data6) => {

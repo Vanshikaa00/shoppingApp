@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ProductsServiceService} from '../services/products-service.service';
 import {CartService} from '../cart.service';
+import {AppService} from '../app.service';
 
 @Component({
   selector: 'app-product-details',
@@ -17,7 +18,8 @@ products;
     private activatedRoute: ActivatedRoute,
     private router: Router,
     private cartService: CartService,
-    private productsService: ProductsServiceService
+    private productsService: ProductsServiceService,
+    private appservice: AppService
     ) { }
 
   ngOnInit() {
@@ -30,10 +32,19 @@ products;
      this.products = data;
    });
   }
+ editProduct(productid) {
+    this.appservice.edit(true);
+    this.router.navigate(['/product-add'], {
+      relativeTo: this.activatedRoute,
+      queryParams: {
+        id: productid
+      }
+    });
+  }
 
   goToCart(prodid: number) {
     // this.router.navigate(['/cart']);
-    this.productsService.addProductToCart(prodid).subscribe((data) => {
+    this.productsService.addProductToCartt(prodid).subscribe((data) => {
     });
   }
   //

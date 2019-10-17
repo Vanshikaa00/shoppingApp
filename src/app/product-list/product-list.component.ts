@@ -23,7 +23,7 @@ export class ProductListComponent implements OnInit {
   }
   goToCart(prodid: number) {
     // this.router.navigate(['/cart']);
-    this.service.addProductToCart(prodid).subscribe((data) => {
+    this.service.addProductToCartt(prodid).subscribe((data) => {
     });
   }
   goToPriceRange($event, number1: number, number2: number) {

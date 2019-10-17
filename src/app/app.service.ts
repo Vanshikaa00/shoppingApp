@@ -34,4 +34,8 @@ export class AppService {
       this.router.navigate(['login']);
     });
   }
+  edit(bool: boolean) {
+    localStorage.setItem('edit', String(bool));
+    return bool;
+  }
 }
