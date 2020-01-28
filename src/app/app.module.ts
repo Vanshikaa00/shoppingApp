@@ -18,8 +18,6 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { OrderhistoryComponent } from './orderhistory/orderhistory.component';
 import { FooterComponent } from './footer/footer.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,

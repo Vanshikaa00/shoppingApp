@@ -54,7 +54,7 @@
     <div *ngIf="prod.productId==userId">
     <div class="row m-5">
         <div class="col-sm-7  p-5 " style="background-color: #F7F8FB;"><!--bg warning-->
-          <img class="imagesizing" src="{{prod.productImage}}">
+          <img class="imagesizing" src="{{prod.productImage}}" class="col-sm-12">
         </div>
 
         <div class="col-sm-5 p-2 py-5"><!--bg warning-->
@@ -78,11 +78,13 @@
               <div class="col-sm-6 boldd">Product Category:</div><!--bg warning-->
               <div class="col-sm-6">{{prod.productCategory}}</div><!--bg warning-->
             </div>
-
+<div class="col-sm-12 col-md-12 col-xs-12 col-lg-12 mx-auto">
             <!--      (click)="addToCart(prod.id)" use it in below button-->
-            <button type="button" class="btn mt-3 btn-primary" style="margin-left:120px;" (click)="goToCart(prod.productId)">
+            <button type="button" class="btn mt-3 btn-primary"  (click)="goToCart(prod.productId)">
               Add to cart</button>
+
             <button type="button" class="btn mt-3 btn-primary ml-3" *ngIf="isAdmin()" (click)="editProduct(prod.productId)" >Edit Product</button>
+</div>
           </div>
           </div>
         </div>
