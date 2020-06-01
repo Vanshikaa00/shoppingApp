@@ -61,6 +61,11 @@ checkoutTotal() {
     });
     alert('Please proceed to checkout now!');
 }
+  goToCheckout() {
+    this.productService.clearCart().subscribe((data5) => {
+    });
+    this.router.navigate(['/checkout']);
+  }
 
 gettotal() {
     this.total = 0;
@@ -76,10 +81,6 @@ totalPrice() {
     });
 }
 
-goToCheckout() {
-    this.productService.clearCart().subscribe((data5) => {
-    });
-    this.router.navigate(['/checkout']);
-}
+
 
 }
